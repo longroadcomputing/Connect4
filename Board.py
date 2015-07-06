@@ -1,6 +1,10 @@
 class Board:
-  def __init__(self):
+  def __init__(self, boardClone = None):
     self._board = [[" " for x in range(0,6)] for x in range(0,7)]
+    if (boardClone != None):
+      for x in range(0,7):
+        for y in range(0,6):
+          self._board[x][y] = boardClone.GetSpace(x,y)
     
   def GetSpace(self, x, y):
     return self._board[x][y]

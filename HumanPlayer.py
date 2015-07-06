@@ -1,8 +1,8 @@
 from PlayerBase import *
 
 class HumanPlayer(PlayerBase):
-  def __init__(self):
-    super().__init__("Human")
+  def __init__(self, name, token):
+    super().__init__(name, token)
     
   def ChooseColumn(self, board):
     return self.GetValidColumn()
